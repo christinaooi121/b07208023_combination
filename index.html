@@ -32,7 +32,7 @@
                 max_scroll = $(document).height() - $(window).height();
                 max_w = $("#horizontal").width() - $(window).width();
             });
-            
+
             $(window).scroll(function () {
                 var scrolled = $(window).scrollTop();
 
@@ -110,8 +110,16 @@
             </p>
         </div>
         <div>
-            <img class="slideanimate" id="img1" alt="img1"
-                src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" />
+            <div class="col-12">
+                <img class="slideanimate" id="img1" alt="img1"
+                    src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" />
+            </div>
+            <div class="col-6"></div>
+            <div class="col-6"><img class="slideanimate" id="img1" alt="img1"
+                    src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" /></div>
+            <div class="col-6"><img class="slideanimate" id="img1" alt="img1"
+                    src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" /></div>
+            <div class="col-6"></div>
         </div>
         <div
             style="padding:20%; background-color:black; background-image:linear-gradient(#131922, black); height:20vh;">
