@@ -21,6 +21,17 @@
     <div class="container-fluid">
         <script>
             $(function () {
+                /*Slide photos*/
+                $(window).scroll(function () {
+                    var scrolled = $(window).scrollTop();
+                    var winh = $(window).height();
+                    var objpos = $("#img1").offset().top;
+                    if (objpos < scrolled + winh * 0.8) {
+                        $("#img1").addClass("slide");
+                    }
+                });
+
+                /*Video Triggered*/
                 var video1_pos = $("#video1").offset().top;
                 var video1_end = video1_pos + $("#v1frame").height() - $(window).height();
                 $(window).scroll(function () {
@@ -36,10 +47,12 @@
             });
         </script>
 
-        <div style="height:100vh; background-color:green;">
+        <div style="height:100vh; background-color:linear-gradient(to right, olive, whitesmoke);">
             <h1>我是一個標題。</h1>
         </div>
-
+        <div>
+            <img id="img1" alt="img1" src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" />
+        </div>
         <div id="v1frame" style="height:1000vh;">
             <div class="sticky-top" style="z-index:-1">
                 <video id="video1"
