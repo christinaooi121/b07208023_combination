@@ -18,7 +18,7 @@
 
 <body>
     <script>
-        $(function() {
+        $(function () {
             var h_pos = $("#horizontal").offset().top;
             var hframe_h = $("#hframe").height();
             var winh = $(window).height();
@@ -31,7 +31,7 @@
                 max_scroll = $(document).height() - $(window).height();
                 max_w = $("#horizontal").width() - $(window).width();
             });
-            $(window).scroll(function () {
+            $(window).scroll(function (e) {
                 var scrolled = $(window).scrollTop();
 
                 /*Horizontal Image*/
@@ -51,12 +51,18 @@
                 });
 
                 /*Video Triggered*/
+                /*
                 console.log(scrolled);
                 if (scrolled > video1_pos && scrolled < video1_end) {
                     $("#video1")[0].play();
                 } else {
                     $("#vidoe1")[0].pause();
                 }
+                */
+                var video = $('#video1').get(0),
+                    videoLength = video.duration,
+                    current_pos = scrolled;
+                video.currentTime = videoLength * (current_pos / max_scroll);
             });
         });
     </script>
@@ -94,8 +100,7 @@
             </p>
         </div>
         <div>
-            <video id="video1" src="assets/train.mp4"
-                    style="width:100vw;"></video>
+            <video id="video1" src="assets/train.mp4" style="width:100vw;"></video>
             <!--<img class="slideanimate" id="img2" alt="img2"
                 src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" />-->
         </div>
