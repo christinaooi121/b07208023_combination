@@ -2,11 +2,6 @@ body {
 	overflow-x: hidden;
 }
 
-.row {
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
 #video {
 	position: fixed;
 	min-width: 100%;
@@ -15,7 +10,6 @@ body {
 	height: auto;
 	z-index: -1;
 	top: -20vh;
-	object-fit: fill;
 }
 
 h1 {
