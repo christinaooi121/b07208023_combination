@@ -1,8 +1,3 @@
-#horizontal {
-	position: relative;
-	display: inline-block;
-	left: 0px;
-}
 body {
 	overflow-x: hidden;
 }
@@ -24,6 +19,15 @@ h1{
   background-color:white;
   text-decoration: bold;
   font-size: 4rem;
+}
+
+#horizontal {
+	position: relative;
+	display: inline-block;
+	left: 0px;
+}
+body {
+	overflow-x: hidden;
 }
 
 .slideanimate {
