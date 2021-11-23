@@ -63,6 +63,20 @@
                     videoLength = video.duration,
                     current_pos = $(document).scrollTop();
                 video.currentTime = videoLength * (current_pos / max_scroll);
+
+                if (
+                    scrolled > video1_pos &&
+                    scrolled < video1_end &&
+                    !$("#video1").hasClass("played")
+                ) {
+                    $("#video1")[0].play();
+                    $("#video1").on("ended", function () {
+                        $("#video1").addClass("played");
+                    });
+                }
+                if (scrolled < video1_pos) {
+                    $("#video1").removeClass("played");
+                }
             });
         });
     </script>
