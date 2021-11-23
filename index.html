@@ -54,40 +54,14 @@
                     });
 
                     /*Video Triggered*/
-                    console.log(scroll_top);
-                    if (scroll_top > video1_pos && scroll_top < video1_end) {
+                    console.log(scrolled);
+                    if (scrolled > video1_pos && scrolled < video1_end) {
                         $("#video1")[0].play();
                     } else {
                         $("#vidoe1")[0].pause();
                     }
-                    if (
-                        scrolled > video1_pos &&
-                        scrolled < video1_end &&
-                        !$("#video1").hasClass("played")
-                    ) {
-                        $("#video1")[0].play();
-                        $("#video1").on("ended", function () {
-                            $("#video1").addClass("played");
-                        });
-                    }
-                    if (scrolled < video1_pos) {
-                        $("#video1").removeClass("played");
-                    }
-
-                    if (
-                        scrolled > video2_pos &&
-                        scrolled < video2_end &&
-                        !$("#video2").hasClass("played")
-                    ) {
-                        $("#video2")[0].play();
-                        $("#video2").on("ended", function () {
-                            $("#video2").addClass("played");
-                        });
-                    }
-                    if (scrolled < video2_pos) {
-                        $("#video2").removeClass("played");
-                    }
                 });
+            });
             });
         </script>
 
