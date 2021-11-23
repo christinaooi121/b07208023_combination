@@ -26,9 +26,7 @@
             var max_scroll = $(document).height() - $(window).height();
             var max_w = $("#horizontal").width() - $(window).width();
             var video1_pos = $("#video1").offset().top;
-            var video2_pos = $("#video2").offset().top;
             var video1_end = $("#video1").offset().top + $("#v1frame").height();
-            var video2_end = $("#video2").offset().top + $("#v2frame").height();
             $(window).on("resize", function () {
                 winh = $(window).height();
                 max_scroll = $(document).height() - $(window).height();
@@ -36,6 +34,7 @@
             });
             $(window).scroll(function () {
                 var scrolled = $(window).scrollTop();
+
                 /*Horizontal Image*/
                 if (scrolled > h_pos && scrolled < h_pos + hframe_h - winh) {
                     var new_left = -1 * max_w * ((scrolled - h_pos) / (hframe_h - winh));
