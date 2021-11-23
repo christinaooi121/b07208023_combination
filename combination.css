@@ -2,24 +2,29 @@ body {
 	overflow-x: hidden;
 }
 
-#video {
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  top: -20vh;
-  object-fit: fill;
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
-h1{
-  position:absolute;
-  top:50vh;
-  left:20vw;
-  background-color:white;
-  text-decoration: bold;
-  font-size: 4rem;
+#video {
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+	top: -20vh;
+	object-fit: fill;
+}
+
+h1 {
+	position: absolute;
+	top: 50vh;
+	left: 20vw;
+	background-color: white;
+	text-decoration: bold;
+	font-size: 4rem;
 }
 
 #horizontal {
@@ -27,6 +32,7 @@ h1{
 	display: inline-block;
 	left: 0px;
 }
+
 body {
 	overflow-x: hidden;
 }
@@ -47,6 +53,7 @@ body {
 		opacity: 0;
 		transform: translateY(70%);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateY(0%);
