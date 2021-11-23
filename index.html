@@ -64,6 +64,7 @@
                     current_pos = $(window).scrollTop();
                 video.currentTime = videoLength * (current_pos / max_scroll);
 
+                /*
                 if (
                     scrolled > video1_pos &&
                     scrolled < video1_end &&
@@ -77,6 +78,7 @@
                 if (scrolled < video1_pos) {
                     $("#video1").removeClass("played");
                 }
+                */
             });
         });
     </script>
