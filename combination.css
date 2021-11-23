@@ -17,8 +17,9 @@ h1{
   font-size: 4rem;
 }
 
-img {
+.slideanimate {
 	width: 100%;
+	visibility: hidden;
 }
 
 .slide {
