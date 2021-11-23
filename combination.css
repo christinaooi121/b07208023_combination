@@ -17,8 +17,8 @@ h1{
 }
 
 #blank_div{
-  margin: 20%;
-  color: black;
+  padding: 20%;
+  background-color: black;
   height: 40vh;
 }
 
