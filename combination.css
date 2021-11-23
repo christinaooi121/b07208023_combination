@@ -13,6 +13,12 @@ h1{
   top:50vh;
   left:20vw;
   background-color:white;
+  text-decoration: bold;
+}
+
+#blank_div{
+  margin: 10% 10%;
+  background-color: black;
 }
 
 img {
