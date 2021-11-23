@@ -63,7 +63,7 @@
                 */
                 var video = $('#video1').get(0),
                     videoLength = video.duration,
-                    current_pos = $(document).scrollTop();
+                    current_pos = $(window).scrollTop();
                 video.currentTime = videoLength * (current_pos / max_scroll);
 
                 /*
