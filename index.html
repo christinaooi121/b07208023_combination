@@ -24,14 +24,16 @@
             var winh = $(window).height();
             var max_scroll = $(document).height() - $(window).height();
             var max_w = $("#horizontal").width() - $(window).width();
-            var video1_pos = $("#video1").offset().top;
-            var video1_end = $("#video1").offset().top + $("#v1frame").height();
+            //var video1_pos = $("#video1").offset().top;
+            //var video1_end = $("#video1").offset().top + $("#v1frame").height();
+
             $(window).on("resize", function () {
                 winh = $(window).height();
                 max_scroll = $(document).height() - $(window).height();
                 max_w = $("#horizontal").width() - $(window).width();
             });
-            $(window).scroll(function (e) {
+            
+            $(window).scroll(function () {
                 var scrolled = $(window).scrollTop();
 
                 /*Horizontal Image*/
