@@ -20,37 +20,23 @@
 <body>
     <div class="container-fluid">
         <script>
-            $(document).ready(function () {
-                var video1_pos = $("#video1").offset().top;
-                var video2_pos = $("#video2").offset().top;
-                var video1_end = $("#video1").offset().top + $("#v1frame").height();
-                var video2_end = $("#video2").offset().top + $("#v2frame").height();
-                console.log(video1_end);
-                $(window).scroll(function () {
-                    var scroll = $(window).scrollTop();
-                    console.log(scroll);
-                    var winh = $(window).height();
-                    if (scroll > video1_pos && scroll < video1_end) {
-                        $("#video1")[0].play();
-                    } else {
-                        $("#video1")[0].pause();
-                    }
-                    if (scroll > video2_pos && scroll < video2_end) {
-                        $("#video2")[0].play();
-                    } else {
-                        $("#video2")[0].pause();
-                    }
-
+            $(function () {
+                var max_scroll = $(document).height() - $(window).height();
+                $(window).scroll(function (e) {
+                    var video1 = $('#video1').get(0),
+                        videoLength = video1.duration,
+                        current_pos = $(document).scrollTop();
+                    video1.currentTime = videoLength * (current_pos1 / max_scroll);
                 });
             });
-
         </script>
 
         <div style="height:100vh; background-color:royalblue;"></div>
 
         <div id="v1frame" style="height:1000vh;">
             <div class="sticky-top" style="z-index:-1">
-                <video id="video1" src="https://drive.google.com/file/d/1Gjfcq5EUJA1X4QqOfo2s0GXoxSzsSI9v/view?usp=sharing"
+                <video id="video1"
+                    src="https://drive.google.com/file/d/1Gjfcq5EUJA1X4QqOfo2s0GXoxSzsSI9v/view?usp=sharing"
                     style="width:100vw;"></video>
             </div>
             <div class="row" style="height:100vh">
